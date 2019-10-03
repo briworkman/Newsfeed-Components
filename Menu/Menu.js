@@ -34,17 +34,17 @@ let menuItems = [
   
 */
 
-const createMenu = menuItems => {
+const createMenu = menuArray => {
   const menu = document.createElement("div");
   menu.classList.add("menu");
 
-  const menuList = document.createElement("ul");
-  menu.appendChild(menuList);
+  const list = document.createElement("ul");
+  menu.appendChild(list);
 
-  menuItems.forEach(element => {
+  menuArray.forEach(item => {
     const link = document.createElement("li");
-    link.textContent = element;
-    menuList.appendChild(link);
+    link.textContent = item;
+    list.appendChild(link);
   });
 
   const menuButton = document.querySelector(".menu-button");
